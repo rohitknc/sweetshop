@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <div><h2>all catagaries</h2></div>
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th>catagary</th>
+                    <th>company</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cat of catag">
+                    
+                    <td>
+                       {{cat['cat']}}
+                    </td>
+                    <td>
+                        {{cat['com']}}
+                    </td>
+                    <td>
+                        <button (click)="delete(cat['cat'])">delete</button>
+                    </td>
+                    
+                </tr>
+            
+            </tbody>
+        </table>
+    </body>
+</html>
